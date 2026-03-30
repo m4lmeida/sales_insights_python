@@ -1,4 +1,4 @@
-# Sales Insights 📈
+# 📈 Python Sales Reports
 
 ![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
