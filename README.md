@@ -1,87 +1,137 @@
 # Sales Insights 📈
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
 
-Este é um projeto de estudo em Python focado em processamento de dados e lógica de análise de vendas. A ferramenta gera registros de vendas aleatórios e fornece um resumo detalhado da receita e performance dos produtos.
+Projeto em Python para geração, análise e exportação de relatórios de vendas. A aplicação cria registros determinísticos, calcula métricas com Python e NumPy e exporta relatórios em PDF com histórico de execução.
 
----
+## Funcionalidades
 
-## ✨ Funcionalidades
+- geração determinística de dados de vendas
+- cálculo de faturamento total e subtotal por venda
+- métricas estatísticas com NumPy
+- identificação de produtos mais e menos vendidos
+- geração de relatório em PDF
+- histórico de relatórios com timestamp
 
-- [cite_start]**Geração de Dados Determinística:** Cria listas de vendas com campos de ID, nome, quantidade e preço, garantindo resultados consistentes através de uma semente fixa (`seed`).
-- [cite_start]**Cálculos Analíticos:** Processamento de totais por venda e receita total acumulada[cite: 2].
-- [cite_start]**Relatório via Terminal:** Exibição organizada dos dados processados diretamente no console (stdout)[cite: 2].
+## Tecnologias
 
----
+- **Python 3.10+**
+- **NumPy 2.4.4**
+- **ReportLab**
+- **Git**
+- **GitHub**
 
-## 🛠️ Tecnologias Utilizadas
+## Estrutura do Projeto
 
-- [cite_start]**Linguagem:** [Python](https://www.python.org/) (utilizando Type Hints - PEP 585)[cite: 6].
-- [cite_start]**Biblioteca de Dados:** [Numpy](https://numpy.org/) (versão 2.4.4).
+```text
+sales_insights_python/
+├─ reports/
+│  ├─ report_history.log
+│  └─ sales_report_<timestamp>.pdf
+├─ src/
+│  ├─ analytics.py
+│  ├─ main.py
+│  ├─ report.py
+│  └─ sales_data.py
+├─ requirements.txt
+├─ README.md
+├─ LICENSE
+└─ .gitignore
+````
 
----
+## Como Executar
 
-## 📂 Estrutura do Projeto
+1. Clone o repositório:
 
-[cite_start]A aplicação segue uma arquitetura modular para separar a lógica de dados da lógica de negócio[cite: 2]:
+```bash
+git clone https://github.com/SEU-USUARIO/sales_insights_python.git
+cd sales_insights_python
+```
 
-- [cite_start]`src/sales_data.py`: Responsável pela geração da lista de dicionários de vendas[cite: 2].
-- [cite_start]`src/analytics.py`: Contém as funções puras de cálculo matemático (Receita Total, Totais por Venda)[cite: 2].
-- [cite_start]`src/main.py`: Ponto de entrada da aplicação que coordena o fluxo e exibe o relatório[cite: 2].
+2. Crie e ative o ambiente virtual:
 
----
+```bash
+python -m venv .venv
+```
 
-## ⚙️ Como Executar o Projeto Localmente
+No Windows:
 
-### Pré-requisitos
-- Python 3.10 ou superior instalado.
+```bash
+.venv\Scripts\activate
+```
 
-### Passo a Passo
+No Linux/macOS:
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/SEU-USUARIO/sales_insights.git](https://github.com/SEU-USUARIO/sales_insights.git)
-   cd sales_insights
-
-2. Crie um ambiente virtual (recomendado):
-
-Bash
-python -m venv venv
-# No Windows:
-venv\Scripts\activate
-# No Linux/Mac:
-source venv/bin/activate
+```bash
+source .venv/bin/activate
+```
 
 3. Instale as dependências:
 
-Bash
+```bash
 pip install -r requirements.txt
+```
 
 4. Execute a aplicação:
 
-Bash
+```bash
 python src/main.py
+```
 
----
+## Formato dos Dados
 
-## 🔌 Exemplo de Saída (Data Format)
-Os registros seguem o seguinte esquema de dados:
-
-JSON
+```json
 {
   "product_id": 1,
   "product_name": "Exemplo de Produto",
   "quantity": 5,
   "price": 20.5
 }
+```
 
----
+## Saída Gerada
 
-## 💡 Instruções de Implementação
+A aplicação:
 
-1.  **Ficheiro `requirements.txt`**: Certifica-te de que tens este ficheiro na raiz com o conteúdo `numpy==2.4.4`, conforme as tuas instruções.
-2.  **Organização de Pastas**: Garante que os teus ficheiros estão dentro da pasta `src/` para que o comando de execução sugerido no README funcione corretamente.
-3.  **Documentação**: Como o teu projeto usa **Type Hints**, o código já será naturalmente mais fácil de ler, o que é excelente para o teu portfólio no GitHub![cite: 6].
+* exibe o resumo no terminal
+* gera um PDF na pasta `reports/`
+* registra a execução em `reports/report_history.log`
 
-Precisas de ajuda para configurar o ficheiro de testes `pytest` que mencionaste no roadmap?
+Exemplo de nome de arquivo:
+
+```text
+sales_report_20260329_154530.pdf
+```
+
+## Principais Funções
+
+* `calculate_sale_total(sale)`
+* `calculate_total_revenue(sales)`
+* `get_sales_totals(sales)`
+* `get_sales_totals_array(sales)`
+* `calculate_mean_sales(sales)`
+* `calculate_std_sales(sales)`
+* `calculate_min_sale(sales)`
+* `calculate_max_sale(sales)`
+* `get_most_sold_product(sales)`
+* `get_least_sold_product(sales)`
+
+## Contribuições
+
+Contribuições são bem-vindas.
+
+Fluxo sugerido:
+
+```bash
+git checkout -b minha-feature
+git add .
+git commit -m "Descrição da melhoria"
+git push origin minha-feature
+```
+
+Depois, abra um Pull Request com a proposta de alteração.
+
+## Licença
+
+Este projeto está licenciado sob a licença **MIT**. Consulte o arquivo `LICENSE` para mais detalhes.
