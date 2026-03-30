@@ -26,6 +26,8 @@ Projeto em Python para geração, análise e exportação de relatórios de vend
 
 ```text
 sales_insights_python/
+├─ docs/
+│  ├─ development-guidelines.md
 ├─ reports/
 │  ├─ report_history.log
 │  └─ sales_report_<timestamp>.pdf
@@ -72,11 +74,14 @@ source .venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+```
 
-4. Execute a aplicação:
+4. **Execute a aplicação:**
 
 ```bash
+```bash
 python src/main.py
+```
 ```
 
 ## Formato dos Dados
