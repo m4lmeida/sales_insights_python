@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
 
-Projeto em Python para geração, análise e exportação de relatórios de vendas. A aplicação cria registros determinísticos, calcula métricas com Python e NumPy e exporta relatórios em PDF com histórico de execução.
+Este é um projeto de estudo em Python voltado à geração, análise e exportação de relatórios de vendas. A aplicação cria registros determinísticos, calcula métricas com Python e NumPy e exporta relatórios em PDF com histórico de execução.
 
 ## Funcionalidades
 
@@ -74,14 +74,11 @@ source .venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-```
 
 4. **Execute a aplicação:**
 
 ```bash
-```bash
 python src/main.py
-```
 ```
 
 ## Formato dos Dados
